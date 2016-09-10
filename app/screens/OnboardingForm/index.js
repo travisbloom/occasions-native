@@ -1,15 +1,14 @@
 import React from 'react'
 
 import { View } from '../../components'
-import { createUserMutation } from '../../mutations'
 
 import Page1 from './Page1'
 
 export default class OnboardingForm extends React.Component {
     static route = {
-      navigationBar: {
-        visible: false,
-      }
+        navigationBar: {
+            visible: false,
+        },
     }
 
     state = { page: 1 }
@@ -23,7 +22,7 @@ export default class OnboardingForm extends React.Component {
     render() {
         const { page } = this.state
         return (
-            <View style={{flex: 1}}>
+            <View style={{ flex: 1 }}>
                 {page === 1 && <Page1 key={1} onSubmit={this.handleSubmit} />}
             </View>
         )

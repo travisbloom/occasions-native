@@ -1,19 +1,18 @@
-import {
-  Asset,
-  Font,
-} from 'exponent';
+import { Asset, Font } from 'exponent'
 
-export default function cacheAssetsAsync({images = [], fonts = []}) {
-  return Promise.all([
-    ...cacheImages(images),
-    ...cacheFonts(fonts),
-  ]);
-}
+const cacheImages = (images) => (
+    images.map(image => Asset.fromModule(image).downloadAsync())
+)
 
-function cacheImages(images) {
-  return images.map(image => Asset.fromModule(image).downloadAsync());
-}
+const cacheFonts = (fonts) => (
+    fonts.map(font => Font.loadAsync(font))
+)
 
-function cacheFonts(fonts) {
-  return fonts.map(font => Font.loadAsync(font));
-}
+const cacheAssetsAsync = ({ images = [], fonts = [] }) => (
+    Promise.all([
+        ...cacheImages(images),
+        ...cacheFonts(fonts),
+    ])
+)
+
+export default cacheAssetsAsync

@@ -1,4 +1,4 @@
-import Relay from 'react-relay';
+import Relay from 'react-relay'
 
 export class createUserMutation extends Relay.Mutation {
     static fragments = {
@@ -7,24 +7,24 @@ export class createUserMutation extends Relay.Mutation {
           firstName
           lastName
           username
-        }`
+        }`,
     };
 
-    getMutation() {
-        return Relay.QL`mutation{createUser}`;
+    static getMutation() {
+        return Relay.QL`mutation{createUser}`
     }
 
     getVariables() {
-        const {firstName, lastName, username, password} = this.props;
-        return {firstName, lastName, username, password};
+        const { firstName, lastName, username, password } = this.props
+        return { firstName, lastName, username, password }
     }
 
-    getFatQuery() {
+    static getFatQuery() {
         return Relay.QL`
           fragment on createUserPayload {
             user
           }
-        `;
+        `
     }
     //
     // getConfigs() {

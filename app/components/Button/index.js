@@ -1,12 +1,12 @@
 import React from 'react'
-import { Button as NBButton } from 'native-base';
+import { Button as NBButton } from 'native-base'
 
-import Spinner from '../Spinner';
+import Spinner from '../Spinner'
 
-const Button = ({loading, children, ...props}) => (
+const Button = ({ loading, children, ...props }) => (
     <NBButton {...props}>
         {loading ? <Spinner /> : children}
     </NBButton>
 )
 
-export default Button;
+export default Button

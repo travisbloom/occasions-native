@@ -1,7 +1,7 @@
 {
     "presets": [
-        {"plugins": ["./build/babelRelayPlugin"]},
         "react-native-stage-0/decorator-support",
+        {"plugins": ["./build/babelRelayPlugin"]}
     ],
     "env": {
         "development": {

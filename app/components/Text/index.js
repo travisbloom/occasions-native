@@ -1,6 +1,6 @@
-import React from 'react';
-import { Text as RNText } from 'react-native';
+import React from 'react'
+import { Text as RNText } from 'react-native'
 
-const Text = (props) => <RNText {...props} />;
+const Text = (props) => <RNText {...props} />
 
-export default Text;
+export default Text

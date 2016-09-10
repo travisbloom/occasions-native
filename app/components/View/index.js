@@ -1,6 +1,6 @@
-import React from 'react';
-import { View as RNView } from 'react-native';
+import React from 'react'
+import { View as RNView } from 'react-native'
 
-const View = (props) => <RNView {...props} />;
+const View = (props) => <RNView {...props} />
 
-export default View;
+export default View
