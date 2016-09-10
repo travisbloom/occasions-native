@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { View } from '../../components'
+import { createUserMutation } from '../../mutations'
 
 import Page1 from './Page1'
 

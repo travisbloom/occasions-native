@@ -3,21 +3,11 @@
 import Exponent from 'exponent';
 
 import React from 'react';
-import {
-  AppRegistry,
-  Platform,
-  StatusBar,
-  StyleSheet,
-  View,
-} from 'react-native';
+import { AppRegistry, Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Provider } from 'react-redux';
-import {
-  NavigationProvider,
-  StackNavigation,
-} from '@exponent/ex-navigation';
-import {
-  FontAwesome,
-} from '@exponent/vector-icons';
+
+import { NavigationProvider, StackNavigation} from '@exponent/ex-navigation';
+import { FontAwesome } from '@exponent/vector-icons';
 
 import Router from './app/navigation/Router';
 import cacheAssetsAsync from './app/utilities/cacheAssetsAsync';
